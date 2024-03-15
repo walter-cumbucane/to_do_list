@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> Hello </h1>
+        <div id="test"> 
+            Nothing yer
+        </div>
+        <button onclick="backend()"> ClickMe! </button>
+
+        <script>
+            async function backend() {
+                try {
+                    const response = await fetch('http://localhost:5000/api/v1/users');
+                    const data = await response.json();
+                    document.getElementById("test").innerHTML = data['message'];
+                
+                } catch (err) {
+                    console.log('Error Fetching data: ', err);
+                }
+            }
+
+        </script>
+        
+    </body>
+</html>
