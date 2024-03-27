@@ -4,6 +4,7 @@ const router = express.Router();
 
 
 router.get('/', usersController.get_all);
+router.post('/', usersController.create_user);
 
 
 

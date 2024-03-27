@@ -1,8 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const log = require('morgan');
 const usersRouter = require('./api/routes/users');
 const tasksRouter = require('./api/routes/tasks');
 const app = express();
+
+
+//Sets a middleware for the logging
+app.use(log('dev'));
 
 
 //Handles Json's requests parsing
@@ -27,6 +32,29 @@ app.use((req, res, next) => {
 //Handles routing
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/tasks', tasksRouter);
+
+
+/* 
+ * Error Handling
+*/
+
+//If a request with an unknown route appears
+app.use((req, res, next) => {
+
+    const err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+//Every error in the application will be redirected to this middleware
+app.use((err, req, res, next) => {
+
+    res.status(err.status || 500).json({
+        error: {
+            message: err.message
+        }
+    });
+});
 
 
 
