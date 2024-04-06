@@ -1,0 +1,26 @@
+POST http://localhost:5000/api/v1/tasks
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHRlcmN1bWJ1Y2FuZSIsImlkIjoiZmExNWZhM2ItZTRjMS00ZTc5LTgwNTYtNTA0NTcwZTAyOTQ3IiwiaWF0IjoxNzEyNDQzNjEyLCJleHAiOjE3MTI0NDcyMTJ9.SS2lSXE3O2PKgyEPtLBI6h_ltbt1eX4lk75a4jFeABY
+
+{
+    "title": "To-Do App Development",
+    "description": "This app has an IDOR vulnerability. I need to figure out a way of fixing it",
+    "completed": false,
+    "userId": "fa15fa3b-e4c1-4e79-8056-504570e02947"
+}
+
+###
+GET http://localhost:5000/api/v1/tasks
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHRlcmN1bWJ1Y2FuZSIsImlkIjoiZmExNWZhM2ItZTRjMS00ZTc5LTgwNTYtNTA0NTcwZTAyOTQ3IiwiaWF0IjoxNzEyNDQzNjEyLCJleHAiOjE3MTI0NDcyMTJ9.SS2lSXE3O2PKgyEPtLBI6h_ltbt1eX4lk75a4jFeABY
+
+
+###
+GET http://localhost:5000/api/v1/tasks/8fe24e11-6b85-4493-ae0f-e78224a01055
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHRlcmN1bWJ1Y2FuZSIsImlkIjoiZmExNWZhM2ItZTRjMS00ZTc5LTgwNTYtNTA0NTcwZTAyOTQ3IiwiaWF0IjoxNzEyNDQzNjEyLCJleHAiOjE3MTI0NDcyMTJ9.SS2lSXE3O2PKgyEPtLBI6h_ltbt1eX4lk75a4jFeABY
+
+###
+DELETE http://localhost:5000/api/v1/tasks/6027275a-b8a9-4750-a542-05f94e6d4042
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbHRlcmN1bWJ1Y2FuZSIsImlkIjoiZmExNWZhM2ItZTRjMS00ZTc5LTgwNTYtNTA0NTcwZTAyOTQ3IiwiaWF0IjoxNzEyNDQzNjEyLCJleHAiOjE3MTI0NDcyMTJ9.SS2lSXE3O2PKgyEPtLBI6h_ltbt1eX4lk75a4jFeABY
